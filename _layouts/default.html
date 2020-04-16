@@ -16,11 +16,6 @@
 			<h2>{{ site.plainwhite.name }}</h2>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 			<ul class="social">
-				{%- if site.plainwhite.social_links.facebook -%}
-				<a href="https://www.facebook.com/{{ site.plainwhite.social_links.facebook }}">
-					<li><i style="margin-left: .6em;" class="fab fa-google"></i></li>
-				</a>
-				{%- endif -%}
 				{%- if site.plainwhite.social_links.github -%}
 				<a href="https://github.com/{{ site.plainwhite.social_links.github }}">
 					<li><i style="margin-left: .6em;" class="fab fa-github"></i></li>
@@ -29,6 +24,11 @@
 				{%- if site.plainwhite.social_links.linkedIn -%}
 				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}">
 					<li><i style="margin-left: .6em;" class="fab fa-linkedin"></i></li>
+				</a>
+				{%- endif -%}
+				{%- if site.plainwhite.social_links.googleresearch -%}
+				<a href="https://scholar.google.com/citations?user={{ site.plainwhite.social_links.googleresearch }}">
+					<li><i style="margin-left: .6em;" class="fab fa-google"></i></li>
 				</a>
 				{%- endif -%}
 
