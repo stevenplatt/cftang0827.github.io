@@ -1,4 +1,4 @@
-# Steven Platt blog
+# An open source blog
 
 **link**: [https://stevenplatt.github.io/](https://stevenplatt.github.io/)
 
