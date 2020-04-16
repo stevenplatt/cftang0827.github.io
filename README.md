@@ -1,6 +1,6 @@
-# cftang blog
+# Steven Platt blog
 
-**link**: [https://cftang0827.github.io/](https://cftang0827.github.io/)
+**link**: [https://stevenplatt.github.io/](https://stevenplatt.github.io/)
 
 ![plainwhite theme preview](/screenshot.png)
 
