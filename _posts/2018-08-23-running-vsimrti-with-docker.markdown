@@ -29,13 +29,16 @@ Access the Ubuntu GUI from the browser:
 ```HTML
 http://127.0.0.1:6080/
 ```
+
+![screenshot](https://raw.github.com/stevenplatt/docker-vsimrti-web/master/screenshots/vsimrti-web.jpg?v1)
+
 This short post leaves out earlier information, such as how the simulations were configured. 
 Assuming that there are existing simulation scenarios that need to be imported - these can be pulled from git, or downloaded to the running docker instance as done on a standalone PC. 
 
-Below are the full contents of the docker file which is being downloaded in the instructions above. This source file is also available on [Github](https://github.com/stevenplatt/docker-vsimrti-web), and can be forked and modified directly, as the GitHub version will have the latest version of the Docker buildfile. 
+Below are the full contents of the docker file which is being downloaded in the instructions above. This source file is also available on Github, and can be forked and modified directly, as the GitHub version will have the latest version of the Docker buildfile. 
 
 
-## The Docker Build File
+## The Docker Build File [GitHub Source](https://github.com/stevenplatt/docker-vsimrti-web)
 
 ```Bash
 FROM ubuntu:16.04
