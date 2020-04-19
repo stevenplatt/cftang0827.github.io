@@ -38,7 +38,7 @@ Assuming that there are existing simulation scenarios that need to be imported -
 Below are the full contents of the docker file which is being downloaded in the instructions above. This source file is also available on Github, and can be forked and modified directly, as the GitHub version will have the latest version of the Docker buildfile. 
 
 
-## The Docker Build File [GitHub Source](https://github.com/stevenplatt/docker-vsimrti-web)
+## The Docker Build File - [GitHub Source](https://github.com/stevenplatt/docker-vsimrti-web)
 
 ```Bash
 FROM ubuntu:16.04
