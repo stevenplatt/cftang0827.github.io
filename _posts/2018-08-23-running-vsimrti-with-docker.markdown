@@ -15,7 +15,7 @@ When downloading the VSimRTI application, running the “firstStart.sh” from i
 
 **Note**: Running the firstStart.sh file requires root access (sudo) the java runtime. This is not installed by default on Ubuntu 16.04 LTS, I installed it using commands:
 
-```Bash
+```
 #add the openjdk repository and install open jdk
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
@@ -31,19 +31,19 @@ Once connected to the running Ubuntu desktop, simulation files can be pulled dow
 
 To pull the docker image:
 
-```Bash
+```
 docker pull telecomsteve/vsimrti-web
 ```
 
 To run the image:
 
-```Bash
+```
 docker run -it –rm -p 6080:80 telecomsteve/vsimrti-web
 ```
 
 Access the Ubuntu GUI from the browser:
 
-```HTML
+```
 http://127.0.0.1:6080/
 ```
 
@@ -57,7 +57,7 @@ Below are the full contents of the docker file which is being downloaded in the 
 
 ## The Docker Build File - [GitHub Source](https://github.com/stevenplatt/docker-vsimrti-web)
 
-```Bash
+```
 FROM ubuntu:16.04
 LABEL maintainer="steven@telecomsteve.com"
 
@@ -117,7 +117,7 @@ ENTRYPOINT ["/startup.sh"]
 
 To get the NS3 build included in the docker container a few additional software is installed, and the NS3 installer shell script is called to completed the NS3 build. These additional Docker build commands are added to the build file reference previously. 
 
-```Bash
+```
 # base install packages
 RUN apt-get update \
  && apt-get install -y --no-install-recommends software-properties-common \
@@ -145,7 +145,7 @@ After bundling NS3 into the Docker build, detailed communications layer logging 
 
 Logging Before: 
 
-```Bash
+```
 2018-04-12 16:29:13,270 INFO  SnsAmbassador - Send v2xMessage.id=19 from node=rsu_0 as Topocast (singlehop) @time=18.000,000,000 s
 
 2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=veh_0 @time=18.000,900,000 s
@@ -159,7 +159,7 @@ Logging Before:
 
 Logging After: 
 
-```Bash
+```
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - ProcessMessage VehicleMovements at t=75000000000
 
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Update Vehicle Positions
