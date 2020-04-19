@@ -42,42 +42,35 @@ Below are the full contents of the docker file which is being downloaded in the 
 
 ```Bash
 FROM ubuntu:16.04
-LABEL maintainer="TelecomSteve"
+LABEL maintainer="steven@telecomsteve.com"
 
 RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list
 
 # base install packages
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends software-properties-common \
-    && add-apt-repository ppa:fcwu-tw/ppa \
-    && add-apt-repository -y ppa:sumo/stable \
-    && apt-add-repository -y ppa:webupd8team/java \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends --allow-unauthenticated \
-        supervisor \
-        sudo vim-tiny net-tools lxde x11vnc xvfb python-software-properties debconf-utils \
-        firefox nginx python-pip python-dev build-essential \
-        mesa-utils libgl1-mesa-dri dbus-x11 x11-utils \
-        dialog wget unzip nano git libprotobuf-dev rsync libsqlite3-dev patch lbzip2
-
-#SUMO installation
-RUN apt-get install -y sumo sumo-tools sumo-doc
+ && apt-get install -y --no-install-recommends software-properties-common \
+ && add-apt-repository ppa:fcwu-tw/ppa \
+ && add-apt-repository -y ppa:sumo/stable \
+ && apt-add-repository -y ppa:webupd8team/java \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends --allow-unauthenticated \
+ supervisor \
+ sudo vim-tiny net-tools lxde x11vnc xvfb python-software-properties debconf-utils \
+ firefox nginx python-pip python-dev build-essential \
+ mesa-utils libgl1-mesa-dri dbus-x11 x11-utils \
+ dialog wget unzip nano git \
+ sumo sumo-tools sumo-doc
 
 # jdk 8 install
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
 RUN apt-get install -y oracle-java8-installer
 
-# Omnet++ additional packages
-# RUN apt-get install -y gcc g++ bison flex perl tcl-dev tk-dev blt libxml2-dev zlib1g-dev \
-# && apt-get install -y doxygen graphviz openmpi-bin libopenmpi-dev libpcap-dev \
-# && apt-get install -y autoconf automake libtool libproj-dev libfox-1.6-dev \
-# && apt-get install -y libgdal-dev libxerces-c-dev qt4-dev-tools libgdal1-dev libwebkitgtk-1.0-0
-
 # vsimrti additional packages
-RUN git clone https://github.com/stevenplatt/vsimrti-scenarios.git /root/Desktop/upf/
-
-# NS3 install
-# RUN yes "y" | bash /root/Desktop/upf/vsimrti/bin/fed/ns3/ns3_installer.sh
+RUN wget https://www.dcaiti.tu-berlin.de/research/simulation/download/get/vsimrti-bin-17.0.zip
+RUN unzip vsimrti-bin-17.0.zip -d /root/Desktop
+RUN rm vsimrti-bin-17.0.zip
+RUN chmod +x /root/Desktop/vsimrti-allinone/vsimrti/firstStart.sh
+RUN bash /root/Desktop/vsimrti-allinone/vsimrti/firstStart.sh
 
 # tini for subreap
 ARG TINI_VERSION=v0.9.0
@@ -99,6 +92,78 @@ RUN cp /tmp/panel /etc/xdg/lxpanel/LXDE/panels/panel
 EXPOSE 80
 WORKDIR /root
 ENV HOME=/home/ubuntu \
-    SHELL=/bin/bash
+ SHELL=/bin/bash
 ENTRYPOINT ["/startup.sh"]
+```
+
+## Integrating the NS3 Simulator with VSimRTI
+
+To get the NS3 build included in the docker container a few additional software is installed, and the NS3 installer shell script is called to completed the NS3 build. These additional Docker build commands are added to the build file reference previously. 
+
+```Bash
+# base install packages
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends software-properties-common \
+ && add-apt-repository ppa:fcwu-tw/ppa \
+ && add-apt-repository -y ppa:sumo/stable \
+ && apt-add-repository -y ppa:webupd8team/java \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends --allow-unauthenticated \
+ supervisor \
+ sudo vim-tiny net-tools lxde x11vnc xvfb python-software-properties debconf-utils \
+ firefox nginx python-pip python-dev build-essential \
+ mesa-utils libgl1-mesa-dri dbus-x11 x11-utils \
+ dialog wget unzip nano git libprotobuf-dev gcc g++ bison flex lbzip2 libxml2-dev rsync libsqlite3-dev patch
+
+# vsimrti additional packages
+RUN git clone https://github.com/stevenplatt/vsimrti-scenarios.git /root/Desktop/upf/
+
+# NS3 install
+RUN yes "y" | bash /root/Desktop/upf/vsimrti/bin/fed/ns3/ns3_installer.sh
+```
+
+## Testing NS3 Integration with Logging
+
+After bundling NS3 into the Docker build, detailed communications layer logging can be enabled by modifying the vsimrti/etc/logback.xml file, to set NS3 logging to be enabled, with log level of “DEBUG”. Finally, the vsimrti_config.xml file within each scenario folder was updated to enable use of NS3 for communications in the simulation, and to disable the default enabled ‘SNS’ communications simulator. Doing this allowed using propagation models from NS3 and get full communication logging as shown below.
+
+Logging Before: 
+
+```Bash
+2018-04-12 16:29:13,270 INFO  SnsAmbassador - Send v2xMessage.id=19 from node=rsu_0 as Topocast (singlehop) @time=18.000,000,000 s
+
+2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=veh_0 @time=18.000,900,000 s
+
+2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=veh_1 @time=18.000,900,000 s
+
+2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=tl_0 @time=18.000,900,000 s
+
+2018-04-12 16:29:13,274 INFO  SnsAmbassador - Send v2xMessage.id=20 from=veh_2 as Geocast (geo routing) @time=19.000,000,000 s
+```
+
+Logging After: 
+
+```Bash
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - ProcessMessage VehicleMovements at t=75000000000
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Update Vehicle Positions
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_2, ext=3]
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(918.2701732605929) y(173.16697777435184) Point2D.Double: GeoPoint{lat|lon=[52.513036,13.330212]}
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_3, ext=4]
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(816.3387485357234) y(162.39611352980137) Point2D.Double: GeoPoint{lat|lon=[52.512918,13.328714]}
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_0, ext=1]
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(903.0686549004749) y(174.82249094638973) Point2D.Double: GeoPoint{lat|lon=[52.513047,13.329987]}
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_1, ext=2]
+
+2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(865.8905054948991) y(167.60215506237) Point2D.Double: GeoPoint{lat|lon=[52.512975,13.329442]}
+
+2018-04-12 16:35:15,787 DEBUG Ns3Ambassador - ProcessTimeAdvanceGrant at t=75000000000
+
+2018-04-12 16:35:15,787 DEBUG Ns3Ambassador - Requested next_event at 75000000000
 ```
