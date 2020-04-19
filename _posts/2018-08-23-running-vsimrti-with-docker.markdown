@@ -96,7 +96,7 @@ ENV HOME=/home/ubuntu \
 ENTRYPOINT ["/startup.sh"]
 ```
 
-## Integrating the NS3 Simulator with VSimRTI
+## Integrating the NS3 Simulator with VSimRTI - [GitHub Source](https://github.com/stevenplatt/docker-vsimrti-web)
 
 To get the NS3 build included in the docker container a few additional software is installed, and the NS3 installer shell script is called to completed the NS3 build. These additional Docker build commands are added to the build file reference previously. 
 
