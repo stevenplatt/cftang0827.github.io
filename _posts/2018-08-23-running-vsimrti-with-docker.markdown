@@ -148,13 +148,9 @@ Logging Before:
 
 ```
 2018-04-12 16:29:13,270 INFO  SnsAmbassador - Send v2xMessage.id=19 from node=rsu_0 as Topocast (singlehop) @time=18.000,000,000 s
-
 2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=veh_0 @time=18.000,900,000 s
-
 2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=veh_1 @time=18.000,900,000 s
-
 2018-04-12 16:29:13,271 INFO  SnsAmbassador - Receive v2xMessage.id=19 on node=tl_0 @time=18.000,900,000 s
-
 2018-04-12 16:29:13,274 INFO  SnsAmbassador - Send v2xMessage.id=20 from=veh_2 as Geocast (geo routing) @time=19.000,000,000 s
 ```
 
@@ -162,26 +158,15 @@ Logging After:
 
 ```
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - ProcessMessage VehicleMovements at t=75000000000
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Update Vehicle Positions
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_2, ext=3]
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(918.2701732605929) y(173.16697777435184) Point2D.Double: GeoPoint{lat|lon=[52.513036,13.330212]}
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_3, ext=4]
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(816.3387485357234) y(162.39611352980137) Point2D.Double: GeoPoint{lat|lon=[52.512918,13.328714]}
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_0, ext=1]
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(903.0686549004749) y(174.82249094638973) Point2D.Double: GeoPoint{lat|lon=[52.513047,13.329987]}
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - UpdateNode : ID[int=veh_1, ext=2]
-
 2018-04-12 16:35:15,786 DEBUG Ns3Ambassador - Pos: x(865.8905054948991) y(167.60215506237) Point2D.Double: GeoPoint{lat|lon=[52.512975,13.329442]}
-
 2018-04-12 16:35:15,787 DEBUG Ns3Ambassador - ProcessTimeAdvanceGrant at t=75000000000
-
 2018-04-12 16:35:15,787 DEBUG Ns3Ambassador - Requested next_event at 75000000000
 ```
