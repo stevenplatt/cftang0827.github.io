@@ -20,6 +20,7 @@ When downloading the VSimRTI application, running the “firstStart.sh” from i
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk
+
 #add linux environment variable for java installation
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk 
 ```
