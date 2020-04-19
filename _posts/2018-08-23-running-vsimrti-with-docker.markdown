@@ -5,18 +5,35 @@ date:   2018-08-23 15:04:00 +09
 categories: Docker VSimRTI
 ---
 
-This post includes instructions for running the VSimRTI vehicle network simulator in the browser, using docker. I won’t detail the installation of Docker, or management of docker images in this post however. It is important to note that when running VSimRTI for the first time, it is required to have a licensed issued to run simulations. This license is tied to your hardware configuration –  fortunately, executing the “firstrun.sh” script of VSimRTI, within Docker; it still sees the native hardware. Simulations can be run within Docker, or directly on the host computer, without a new license.
+This post includes instructions for running the VSimRTI vehicle network simulator in the browser, using docker. This setup can be used to isolate a VSimRTI installation from your local machine, to prevent application conflicts. 
 
-To pull the docker image:
+I won’t detail the installation of Docker, or management of docker images in this post however. It is important to note that when running VSimRTI for the first time, it is required to have a licensed issued to run simulations. This license is tied to your hardware configuration –  fortunately, executing the “firstrun.sh” script of VSimRTI, within Docker; it still sees the native hardware. Simulations can be run within Docker, or directly on the host computer, without a new license.
+
+## Obtaining a License
+
+When downloading the VSimRTI application, running the “firstStart.sh” from its root folder generates a text file with system info, including CPU core, operating system, and RAM installed. After emailing this file to the VSimRTI email distribution (vsimrti@fokus.fraunhofer.de), a username is issued with an assigned expiry date – the expiry can be extended with an additional email request.
+
+Note: Running the firstStart.sh file requires root access (sudo) the java runtime. This is not installed by default on Ubuntu 16.04 LTS, I installed it using commands:
 
 ```Bash
-docker pull telecomsteve/vsimrti-web
+#add the openjdk repository and install open jdk
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+#add linux environment variable for java installation
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk 
 ```
 
 ## Running Ubuntu in the Browser
 
 The first hurtle of making the simulation portable was to get an Ubuntu image running within Docker while having a full desktop UI. This was done using X11, VNC, Apache Server, and LXDE desktop on an Ubuntu 16 LTS core. The origins of this Ubuntu base can be viewed on GitHub.  From this core Ubuntu instance additional commands were added to the Docker file to install Java, Git, SUMO, Firefox, and to download, unzip, and place the VSimRTI files on the desktop. When running the Docker image, the included Apache installation and X11 make the Ubuntu LXDE desktop available at port 80 of the Docker machine. This creates a fixed package, that could be run, torn down, and shared between anyone who has simulations to run in VSimRTI.
 Once connected to the running Ubuntu desktop, simulation files can be pulled down and run on the Docker machine, using Git. The below screenshot shows the VSimRTI “Tiergarten” example running within Firefox on the Docker Ubuntu image.
+
+To pull the docker image:
+
+```Bash
+docker pull telecomsteve/vsimrti-web
+```
 
 To run the image:
 
