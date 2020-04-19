@@ -13,7 +13,7 @@ I won’t detail the installation of Docker, or management of docker images in t
 
 When downloading the VSimRTI application, running the “firstStart.sh” from its root folder generates a text file with system info, including CPU core, operating system, and RAM installed. After emailing this file to the VSimRTI email distribution (vsimrti@fokus.fraunhofer.de), a username is issued with an assigned expiry date – the expiry can be extended with an additional email request.
 
-Note: Running the firstStart.sh file requires root access (sudo) the java runtime. This is not installed by default on Ubuntu 16.04 LTS, I installed it using commands:
+**Note**: Running the firstStart.sh file requires root access (sudo) the java runtime. This is not installed by default on Ubuntu 16.04 LTS, I installed it using commands:
 
 ```Bash
 #add the openjdk repository and install open jdk
