@@ -47,7 +47,7 @@ Programming code for the black box prototype is not final, and is a topic of fur
 
 ### Arduino Schematic
 
-[Schematic Image]
+![obdII_prototype](assets/img/obdII_prototype.png)
 
 ### Device Pinouts
 
