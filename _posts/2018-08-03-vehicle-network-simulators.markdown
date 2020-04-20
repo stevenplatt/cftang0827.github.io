@@ -1,4 +1,9 @@
-Application Layer Simulators for Vehicle Networks
+---
+layout: post
+title:  "Application Layer Simulators for Vehicle Networks"
+date:   2018-08-03 15:04:00 +09
+categories: VSimRTI Vehicle-Networks
+---
 
 With development of intelligent transport system applications, a series of simulation platforms began development to allow modeling new software applications in vehicle. There is now a clear split between simulation environments built with focus on communications and mobility modeling (OVNIS and VEINS), and new simulations tacks that have additional programming to allow running vehicle applications on top of existing mobility and communications models (iTetris and VSimRTI). 
 Depending on the format of simulation, most environment bundle similar components to complete simulations. For platforms focused on communications, this the existing SUMO platform for mobility models, combined with NS-2, NS-3, SWANS or similar environment for communications facilities. Both OVNIS and VEINS use this pairing. Application layer simulators take these components and pair them with additional programming to host external application code, as well as managing data and clock syncing among all connected environments. Comparing performance, based on the above feature requirements, VSimRTI proved most compatible for the intended use. Below is a summary of features and the architecture each framework provides.
