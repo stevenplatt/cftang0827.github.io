@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Vehicle Telemetry Prototype using Arduino and OBDII"
+title:  "A Vehicle Telemetry Blackbox using Arduino and OBDII"
 date:   2018-09-30 15:04:00 +09
 categories: VANET Arduino
 ---
