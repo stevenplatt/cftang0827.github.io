@@ -63,5 +63,3 @@ XBee Radio | Dout - 0, Din - 1, Vcc - 5v, Gnd - Gnd
 
 Placement of the OBD II port is standardized and can be located  in the driver-side footwell below the steering wheel. Power is provided through the OBD II port and no configuration of the port is required. The ELM327 socket is plug and play.
 
-[OBDII Location Image]
-
