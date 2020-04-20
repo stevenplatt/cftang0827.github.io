@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Existing V2X Standards and Use Cases"
+title:  "Review of Vehicle Network Standards and Use Cases"
 date:   2018-08-03 15:04:00 +09
 categories: VANET V2X
 ---
@@ -65,3 +65,32 @@ As an enhancement of 3GPP16-22886, the 3GPP later published 3GPP17-22186 as an e
 **Remote Driving**: Enables remote driving of vehicles operating in a dangerous environment, or operation of a vehicle for passengers who cannot operate it themselves. 
 
 Within each of the above categories, 3GPP17-22186 outlines a similar range of network and use case performance requirements that include: payload size, end-to-end latency, reliability (%), data rate (Mbps), communications range (meters), and transmission rate.
+
+# Example Research - Project 5GCar
+
+Funded by the European Commission, the 5GCAR project is a public-private-partnership (PPP) developed to bring together the automotive and communications industries, with research institutions to develop next generation connected vehicle and intelligent transport applications enabled by 5G technologies. In its most recent deliverables, Project 5GCAR outlines five use cases for specific development [16]:
+Cooperative Maneuver: Sharing of local data for driving intention and trajectory. This data is used to negotiate interaction among groups of vehicles. 
+Cooperative Perception: Sharing of data derived from various sensors. These sensors can be installed to the vehicle, road, or other positions. Development in this area focuses heavily on delivering better than line-of-sight vision to smart vehicles. 
+Cooperative Safety: Sharing of data, optimized for detection of road hazards and safety of other road users, such as pedestrians and cyclists. 
+Autonomous Navigation: Centralized and or distributed processing of maps and routes. These routes are derived from shared vehicle and road network data, and combined with traditional remote sensing and navigation systems.
+Remote Drive: Controlling a vehicle remotely to enable driving without a physical operator present. This includes actuating all vehicle function remotely, inclusive of braking, steering, and acceleration.
+
+## Toy Car Lane Merge Model from CTTC
+
+Today, research is being conducted at Centre Tecnològic de Telecomunicacions de Catalunya (CTTC) under the 5GCar project to prove an implementation of the cooperative maneuver use case in connected cars. The hardware implementation under development at CTTC uses a sensing camera to detect vehicle position, while feeding the data to a network controller for processing. Additionally, the network controller, with visibility of the total network state, applies algorithms and issues command and control to vehicles to aid successful navigation and collision avoidance in the cooperative maneuver use case.
+
+Modeling networks on these use cases requires modeling strict vehicle-to-vehicle and vehicle-to-infrastructure communication layers, but also, additional capability to model vehicle mobility, external sensor and camera data, as well as allowing remote interfaces for network controllers and application code to execute real-world command and control during simulations.
+
+[Toy Car Image]
+
+## 5GCAR: Cooperative Maneuver Use Case
+
+The toy car model built at CTTC is an example of the Cooperative Maneuver use case, presented in Project 5GCar. Within European Commission requirements outlined for project 5GCAR; vehicles operating in this use case satisfy interaction conditions summarized below [16]: 
+
+**Precondition**: Vehicles are in physical proximity to each other, have autonomous driving capabilities, satellite navigation, and are equipped with wireless communications. Participating vehicles are authenticated. 
+
+**Triggering Event**: A vehicle wants to join traffic, and merge into a lane.
+
+**Actors**: Traffic vehicle (required), merging vehicle (required), infrastructure sensors (optional), application server (optional). Traffic vehicles must be network enabled, merging vehicles may be network enabled, or not.
+
+Within these conditions, Project 5GCAR intends that wireless communications systems be used to supplement Advanced Driver Assistance Systems (ADAS), which is most commonly implemented using radar, lidar, and vision cameras; to allow better than Line of Sight (LOS) vision and enhanced localization. 
