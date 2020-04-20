@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Vehicle Telemetry Prototype using Arduino and OBDII"
-date:   2018-08-03 15:04:00 +09
+date:   2018-09-30 15:04:00 +09
 categories: VANET Arduino
 ---
 
@@ -19,10 +19,11 @@ The full listing of measures and their corresponding VSimRTI parameter are shown
 
 ### Telemetry Measures
 
-First Header | Second Header
+Black Box Measures | VSimRTI Parameter Equivalents
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Speed | acceleration, deceleration, maximum speed
+Location | Route, Road, Position
+Distance | Minimum Gap
 
 ### Black Box Hardware
 Below is a list of hardware parts proposed for the black box prototype. Note that the Arduino Mega board is used to allow connecting all sensors to a single board and uses 5V power that is compatible with the sensors. If an equivalent board of another brand is used, it must also use the 5V rating, rather than 3.3V. Additionally the HC-05 bluetooth module is used in place of an HC-06 or alternate unit, to allow functioning as bluetooth master in order to pair with and query the ELM327 plug connected to the vehicle's’ OBD II port. If a different bluetooth module is used, bluetooth AT mode must be supported.
