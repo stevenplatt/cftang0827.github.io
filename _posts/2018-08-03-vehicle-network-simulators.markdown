@@ -2,7 +2,7 @@
 layout: post
 title:  "Application Layer Simulators for Vehicle Networks"
 date:   2018-08-03 15:04:00 +09
-categories: VSimRTI VANETS
+categories: VSimRTI VANET
 ---
 
 With development of intelligent transport system applications, a series of simulation platforms began development to allow modeling new software applications in vehicle. There is now a clear split between simulation environments built with focus on communications and mobility modeling (OVNIS and VEINS), and new simulations tacks that have additional programming to allow running vehicle applications on top of existing mobility and communications models (iTetris and VSimRTI). 
