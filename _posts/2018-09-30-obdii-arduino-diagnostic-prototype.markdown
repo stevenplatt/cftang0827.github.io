@@ -51,6 +51,14 @@ Programming code for the black box prototype is not final, and is a topic of fur
 
 ### Device Pinouts
 
+Component | Arduino Pin
+------------ | -------------
+SD Card Reader | CS - 53, SCK - 52, MOSI - 51, MISO - 50, Vcc - 5v, Gnd - Gnd
+GPS | TX - 15, RX - 14, Gnd - Gnd, Vcc - 5v
+Ultrasonic Sensor | Echo - 9. Trigger - 8, Vcc - 5v, Gnd - Gnd
+Bluetooth | TX - 17, RX - 16, Key - 3, Vcc - 19, Gnd - 18
+XBee Radio | Dout - 0, Din - 1, Vcc - 5v, Gnd - Gnd
+
 ## Connecting the OBD II Reader
 
 Placement of the OBD II port is standardized and can be located  in the driver-side footwell below the steering wheel. Power is provided through the OBD II port and no configuration of the port is required. The ELM327 socket is plug and play.
