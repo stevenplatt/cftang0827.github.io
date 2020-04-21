@@ -42,7 +42,12 @@ The roadside unit has the simpler structure of the entities in the environment. 
 
 Programming on the vehicle includes two java classes, these are the ‘Slow Down App’, and ‘Network Merge Assist’ classes. The Network Merge Assist class works similar to the Castelldefels RSU application class, it equips the vehicle with 802.11p networking, and manages the queuing and broadcast of vehicle data, such as location and route, while listening for responses from a roadside unit, and when the message is received, it parses the Stop or Drive message. If a Stop message is received, this class calls the Slow Down App, which brings the vehicle to a stop using internal vehicle control messages.
 
-[Table]
+#### Java Application Classes
+
+Roadside Unit | Vehicle
+------------ | -------------
+Castelldefels RSU Class | Network Merge Assist Class, Slow Down App Class
+
 
 # Autonomous Merge Fallback
 
