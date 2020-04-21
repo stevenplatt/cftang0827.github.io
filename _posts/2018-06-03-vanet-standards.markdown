@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Review of Vehicle Network Standards and Use Cases"
-date:   2018-08-03 15:04:00 +09
+date:   2018-06-03 15:04:00 +09
 categories: VANET V2X
 ---
 
 The development of simulation platforms has followed closely the specifications outlined by standards bodies dating back to 2010. For vehicle network applications, these tentpole standards have been the ETSI Intelligent Transport Systems definition, and later expansions in the form of ITU-R Intelligent Transport Systems, LTE Release 14, and LTE release 15. 
 
 # ETSI Intelligent Transport Systems
-In 2010, ETSI defined its first set of Intelligent Transport Systems (ITS) standards [22]. The definition initially outlined six categories and provided examples of intelligent transport application:
+In 2010, ETSI defined its first set of Intelligent Transport Systems (ITS) standards [1]. The definition initially outlined six categories and provided examples of intelligent transport application:
 
 **Active Road Safety**: Slow vehicle warning, intersection collision warning, emergency vehicle warning
 
@@ -22,11 +22,11 @@ In 2010, ETSI defined its first set of Intelligent Transport Systems (ITS) stand
 
 **Signage Applications**: In vehicle speed limit display, signal violation (safety)
 
-These categories of Intelligent Transport Systems are one of the earliest uses of the term. Today ETSI is actively updating its standards for ITS, which now include defining applications of vehicle cooperative adaptive cruise control (C-ACC), vehicle platooning, and vulnerable road users (VRU) [23] [24]. These updates are expected to be published as “Release 2”, with the original document being “Release 1”.
+These categories of Intelligent Transport Systems are one of the earliest uses of the term. Today ETSI is actively updating its standards for ITS, which now include defining applications of vehicle cooperative adaptive cruise control (C-ACC), vehicle platooning, and vulnerable road users (VRU) [2] [3]. These updates are expected to be published as “Release 2”, with the original document being “Release 1”.
 
 # ITU-R Intelligent Transport Systems
 
-Prior to releases 14 and 15 of the LTE standard by the 3GPP, the United Nations ITU-R published guidance M.1890 (ITUR11-1890) in April 2011 [20]. The document titled “Intelligent Transport Systems - Guidelines and objectives” outlined eight classes of application for network connected transportation systems. These broad categories have since been extended, further defined and implemented in the market in the year after. These eight use classes are: 
+Prior to releases 14 and 15 of the LTE standard by the 3GPP, the United Nations ITU-R published guidance M.1890 (ITUR11-1890) in April 2011 [4]. The document titled “Intelligent Transport Systems - Guidelines and objectives” outlined eight classes of application for network connected transportation systems. These broad categories have since been extended, further defined and implemented in the market in the year after. These eight use classes are: 
 
 **Advanced Vehicle Control Systems**: Collision avoidance, enhanced driver vision, pre-crash restraint deployment, and automated road systems. 
 
@@ -46,13 +46,13 @@ Prior to releases 14 and 15 of the LTE standard by the 3GPP, the United Nations 
 
 # 3GPP LTE Release 14 
 
-In 2015, under LTE release 14 technical standards; the 3GPP finalized Technical Specification (TS) 3GPP16-22885, which outlined performance and use requirements for V2X applications in several road conditions. This specification includes speed, distance, latency, and reliability measure focused on driver awareness and warning systems, with reliability requirements as strict as up to 95% [17]. This specification assumed level 1 vehicle communications, using CAM (cooperative awareness message) and DENM (decentralized environmental notification message) messages. The CAM and DENM message have since become a standard format available in a few V2X application simulators, such as VSimRTI. Full detail of TS 22.885 use case specifications are below: 
+In 2015, under LTE release 14 technical standards; the 3GPP finalized Technical Specification (TS) 3GPP16-22885, which outlined performance and use requirements for V2X applications in several road conditions. This specification includes speed, distance, latency, and reliability measure focused on driver awareness and warning systems, with reliability requirements as strict as up to 95% [5]. This specification assumed level 1 vehicle communications, using CAM (cooperative awareness message) and DENM (decentralized environmental notification message) messages. The CAM and DENM message have since become a standard format available in a few V2X application simulators, such as VSimRTI. Full detail of TS 22.885 use case specifications are below: 
 
 [Table Image]
 
 # 3GPP LTE Release 15
 
-As an enhancement of 3GPP16-22886, the 3GPP later published 3GPP17-22186 as an enhancement for V2X services under LTE release 15. This update allowed more specific requirements among different vehicle network messages, not directly tying them to the environment in which they are deployed. This specification covered five areas [18]: 
+As an enhancement of 3GPP16-22886, the 3GPP later published 3GPP17-22186 as an enhancement for V2X services under LTE release 15. This update allowed more specific requirements among different vehicle network messages, not directly tying them to the environment in which they are deployed. This specification covered five areas [6]: 
 
 **Generic Messaging**: General messaging, applicable in all V2X scenarios. Interworking, multi-RAT, and routing messages. 
 
@@ -68,7 +68,7 @@ Within each of the above categories, 3GPP17-22186 outlines a similar range of ne
 
 # Example Research - Project 5GCar
 
-Funded by the European Commission, the 5GCAR project is a public-private-partnership (PPP) developed to bring together the automotive and communications industries, with research institutions to develop next generation connected vehicle and intelligent transport applications enabled by 5G technologies. In its most recent deliverables, Project 5GCAR outlines five use cases for specific development [16]:
+Funded by the European Commission, the 5GCAR project is a public-private-partnership (PPP) developed to bring together the automotive and communications industries, with research institutions to develop next generation connected vehicle and intelligent transport applications enabled by 5G technologies. In its most recent deliverables, Project 5GCAR outlines five use cases for specific development [7]:
 
 **Cooperative Maneuver**: Sharing of local data for driving intention and trajectory. This data is used to negotiate interaction among groups of vehicles. 
 
@@ -99,3 +99,17 @@ The toy car model built at CTTC is an example of the Cooperative Maneuver use ca
 **Actors**: Traffic vehicle (required), merging vehicle (required), infrastructure sensors (optional), application server (optional). Traffic vehicles must be network enabled, merging vehicles may be network enabled, or not.
 
 Within these conditions, Project 5GCAR intends that wireless communications systems be used to supplement Advanced Driver Assistance Systems (ADAS), which is most commonly implemented using radar, lidar, and vision cameras; to allow better than Line of Sight (LOS) vision and enhanced localization. 
+
+[1] ETSI TR 102 638, “Intelligent Transport Systems (ITS); Vehicular Communications; Basic Set of Applications; Definitions”, V1.1.1, 2009. 
+
+[2] ETSI TR 103 298, “Intelligent Transport Systems (ITS); Platooning: pre-standardization study”, 2017. 
+
+[3] ETSI TR 103 299, “Intelligent Transport Systems (ITS); Cooperative Adaptive Cruise Control (C-ACC); Pre-standardization study”, 2017.
+
+[4] ITU-R M.1890, “Intelligent Transport Systems - Guidelines and objectives”, 2011.
+
+[5] 3GPP TR 22.885, “Study on LTE support for Vehicle-to-Everything (V2X) services”, 2015.
+
+[6] 3GPP TR 22.186, “Service requirements for enhanced V2X scenarios”, 2017.
+
+[7] Antonio Eduardo Fernandez et al, "Deliverable D2.1 5GCAR Scenarios, Use Cases, Requirements and KPIs," https://5gcar.eu/wp-content/uploads/2017/05/5GCAR_D2.1_v1.0.pdf, pp.1-87, 31 August, 2017.
