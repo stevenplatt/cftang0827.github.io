@@ -32,7 +32,7 @@ Note that the algorithm code runs within the ‘Castelldefels RSU’ java class 
 Applying the autonomous merge algorithm in virtual space, figure 7 shows the layout of the Castelldefels simulation. Note that vehicles in the diagram are not to scale. The diagram shows physical representation of vehicles concurrently arriving on from opposing routes A and B. The controlling roadside unit is also displayed. The blue circle surrounding the center of the diagram represents the communications range in which the roadside unit receive ad hoc beacons from arriving vehicles. This assumes a standard transmit and received powers along with uniform path loss. 
 Beyond these three actors in the environment, I show representation of the beacon data flow, from the vehicles to the tower, and corresponding stop and drive response sent in return. Last, there is the target merge zone, the roundabout, marked with a blue triangle.
 
-[Environment Map]
+![environment_map](/assets/img/environment_map.png)
 
 # Java Application Class Map
 
