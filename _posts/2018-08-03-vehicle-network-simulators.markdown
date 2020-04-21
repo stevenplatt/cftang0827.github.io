@@ -16,19 +16,19 @@ Developed the University of Luxembourg in 2011, OVNIS is the least feature compl
 
 Veins was first released in 2011. It is fully open source under the GPL license and has an active development community. Unlike OVNIS and iTetris; Veins combines SUMO mobility data, with the OmNet++ simulator. which is considered to have a less steep learning curve, compared to NS-3. Veins also has multiple prepackaged extensions to support simulating LTE radio networks as well as shadowing and path loss caused by city buildings – features lacking in both OVNIS and iTetris, without the addition of NS-3 LTE extensions and custom programming. Another important distinction of using Veins, is that it does not provide a fully developed application runtime environment. Instead, users can run any application, as long as the application is written in the C++ language and properly associates to an entity running from within the simulation (vehicle, roadside unit, or similar). Below is a diagram, provided by Veins, to outline the simulators modular functionality. 
 
-![Veins](https://github.com/stevenplatt/stevenplatt.github.io/blob/master/assets/img/2018_08_03_veins.png)
+![Veins](/assets/img/2018_08_03_veins.png)
 
 # iTetris
 
 Released in 2013, iTetris combines, SUMO mobility data with the NS-3 network simulator. iTetris does not include a GUI for visualizing trace and communication data, and support running simulations only on a Linux platform, but the system claims to be language agnostic for its vehicle application framework, and explicitly states support for simulating vehicle applications written in C++, java, and python; a large advantage over VSimRTI, which can only support application written in java. Features and tutorials are tailored for smart transport simulations, such as emissions and congestion models. Another differentiation vs the closed source VSimRTI, all code of the iTetris platform is open source and can be modified and used without special license. Figure 3 shows the structure of the iTetris simulator. 
 
-![iTetris](https://github.com/stevenplatt/stevenplatt.github.io/blob/master/assets/img/2018_08_03_itetris.jpg)
+![iTetris](assets/img/2018_08_03_itetris.jpg)
 
 # VSimRTI
 
 VSimRTI is the newest simulation framework and is also most flexible. It supports SUMO traffic data, combined with NS-3, OmNet++, or SNS network simulators [27]. This is important, since it allows changing the communications layers to suite the experiment or custom code being deployed. The VSimRTI framework is also best at visualizing data with support for Open Street Maps traffic overlays. VSimRTI supports Windows, Mac, and Linux. Unlike the other simulators listed, VSimRTI is not open source, and running the simulator requires a physical license by granted by the Fraunhofer institute, who supports the simulator. VSimRTI relies on a few open source projects for the core of it simulation environment, but a large portion of the simulators code is proprietary and encompasses application code written to simulate vehicle and roadside unit operating systems. This includes items such as minimum following distance, how quickly vehicle speed is adjusted, and providing GPS, messaging, and other application functionality to entities in simulation. Figure 4 shows the VSimRTI runtime infrastructure and the open source components on which it is based. 
 
-![vSimRTI](https://github.com/stevenplatt/stevenplatt.github.io/blob/master/assets/img/2018_08_03_VSimRTI_logo.png)
+![vSimRTI](/assets/img/2018_08_03_VSimRTI_logo.png)
 
 Based on planned research, VSimRTI was selected as the simulation framework. It has the best native support for visualizing data while being competitive to deliver all other layers required in the simulation stack. For maximum compatibility Ubuntu Linux 16.04 LTS is chosen as the installation base for all components. 
 
