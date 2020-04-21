@@ -25,7 +25,7 @@ The above image shows the full detail of the algorithm. As part of the vehicle o
 
 Note that the algorithm code runs within the ‘Castelldefels RSU’ java class on the roadside unit. For additional context I represent again the logic in written form below:
 
-![obdii_prototype](/assets/img/obdii_prototype.png)
+![algorithm_logic_alt](/assets/img/algorithm_logic_alt.png)
 
 # Environment Map
 
