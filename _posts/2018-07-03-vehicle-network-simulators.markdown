@@ -22,7 +22,7 @@ Veins was first released in 2011. It is fully open source under the GPL license 
 
 Released in 2013, iTetris combines, SUMO mobility data with the NS-3 network simulator. iTetris does not include a GUI for visualizing trace and communication data, and support running simulations only on a Linux platform, but the system claims to be language agnostic for its vehicle application framework, and explicitly states support for simulating vehicle applications written in C++, java, and python; a large advantage over VSimRTI, which can only support application written in java. Features and tutorials are tailored for smart transport simulations, such as emissions and congestion models. Another differentiation vs the closed source VSimRTI, all code of the iTetris platform is open source and can be modified and used without special license. Figure 3 shows the structure of the iTetris simulator. 
 
-![iTetris](assets/img/2018_08_03_itetris.jpg)
+![iTetris](/assets/img/2018_08_03_itetris.jpg)
 
 ## VSimRTI
 
