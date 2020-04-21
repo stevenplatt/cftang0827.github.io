@@ -23,7 +23,7 @@ The above image shows the full detail of the algorithm. As part of the vehicle o
 
 ![castelldefels_algorithm](/assets/img/castelldefels_algorithm.png)
 
-Note that the algorithm code runs within the ‘Castelldefels RSU’ java class on the roadside unit. For additional context I represent again the logic in written form below:
+Note that the algorithm code runs within the ‘Castelldefels RSU’ java class on the roadside unit. For additional context I represent again the logic in written form below:<br />
 
 ![algorithm_logic_alt](/assets/img/algorithm_logic_alt.png)
 
