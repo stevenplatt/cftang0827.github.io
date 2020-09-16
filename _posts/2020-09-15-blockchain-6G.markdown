@@ -20,7 +20,7 @@ The information society envisioned by 6G is characterized by globally pervasive 
 Bio sensing, hyper high-speed rail, and sightseeing at sea and in space have been identified as use cases specific to the 6G evolution [1]. Pursuing a macro view of these new networks will allow pairing the new network behaviors with distributed ledger structure in a way that remains compatible as its use cases evolve and change. Table 1 shows the macro view of 6G network performance targets and emergent technologies expected to support them. 
 
 | 6G Performance Targets | Enabling Technologies |
-| ------------ | ------------- |
+| --------------------------- | --------------------------- |
 | Peak Data Rate (≥1 Tb/s) | THz Communications |
 | User Data Rate (1Gb/s) | Spatially Multiplexed MIMO |
 | Latency (10-100μs) | Large Intelligent Surfaces |
@@ -30,7 +30,8 @@ Bio sensing, hyper high-speed rail, and sightseeing at sea and in space have bee
 | Energy Efficiency (100x) | Blockchain |
 | Spectrum Efficiency (5-10x) | Artificial Intelligence |
 
-*TABLE 1:* Defining 6G: performance targets and enabling technologies [1]. 6G Performance Targets and Enabling Technologies are not pairwise andare listed here in random order.
+*TABLE 1:* Defining 6G: performance targets and enabling technologies [1]. 
+6G Performance Targets and Enabling Technologies are not pairwise andare listed here in random order.
 
 ### Finding Utility in Distributed Ledger Structure
 
@@ -69,13 +70,14 @@ Unlike previously mentioned ledger structures which gain flexibility through mod
 As summary, table 2 below shows the previously presented data structures as well as the corresponding network behaviors compatible with each.
 
 | Data Structure | Network Behavior |
-| ------------ | ------------- |
+| --------------------------- | --------------------------- |
 | Distribtued Hash Table | Dynamic Topology & Hyper Density | 
 | Directed Acyclic Graph | Network Autonomy |
 | Block Lattice | Hyper Density | 
 | Blockchain | Network Softwarization |
 
-*TABLE 2:* Mapping data structure to network behaviors. Placing  focus  on  network  behavior  allows  deployment  of  blockchainwithout binding it directly to specific enabling technologies.
+*TABLE 2:* Mapping data structure to network behaviors. 
+Placing  focus  on  network  behavior  allows  deployment  of  blockchainwithout binding it directly to specific enabling technologies.
 
 
 ## Blockchain Applications in 6G
