@@ -4,6 +4,7 @@ title:  "Where does Blockchain fit in 6G?"
 date:   2020-09-15 15:04:00 +09
 categories: Blockchain 6G Wireless
 ---
+#### Author: Steven Platt
 
 With 5G network services reaching initial commercial deployments, work has begun to map how these networks will be evolved and matured for the eventual migration to 6th generation designs expected in 2030. The International Telecommunications Union (ITU-T) has begun formal planning with the establishment of the Focus Group on Technologies for Network 2030, while recent further research has been published providing early 6G performance targets, enabling technologies and use cases. In additional to terahertz spectrum, and visible light communication, blockchain is also identified as a technology core to enabling the advanced information society envisioned with 6G [1]. 
 
