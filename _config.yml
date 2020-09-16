@@ -15,12 +15,7 @@ plainwhite:
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   analytics_id: UA-22384883-3
-  navigation:
-    - title: Blog
-      url: "/"
-    - title: Resume
-      url: "/cv"
-  dark_mode: true
+  # dark_mode: true
   # disqus_shortname: httpscftang0827githubio
   # generate social links in footer
   social_links:
