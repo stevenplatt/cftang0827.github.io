@@ -4,7 +4,7 @@ title:  "Autonomous Vehicle Merge Algorithm for 802.11p VANETS"
 date:   2018-08-03 15:04:00 +09
 categories: VSimRTI VANET Algorithms
 ---
-
+#### Author: Steven Platt
 With the simulation environment chosen (VSimRTI), this post covers the details of the algorithm planned for managing lane merges of approaching vehicles in a custom-built simulation scenario, named “Castelldefels”.
 
 The Castelldefels simulation assumes 802.11p communications, rather than a cellular network. This allows the same simulation to be built with physical test hardware or expanded by the CTTC if required.

@@ -4,7 +4,7 @@ title:  "Run VSimRTI in the Browser with Docker"
 date:   2018-08-23 15:04:00 +09
 categories: Docker VSimRTI VANET
 ---
-
+#### Author: Steven Platt
 This post includes instructions for running the VSimRTI vehicle network simulator in the browser, using docker. This setup can be used to isolate a VSimRTI installation from your local machine, to prevent application conflicts. 
 
 I won’t detail the installation of Docker, or management of docker images in this post however. It is important to note that when running VSimRTI for the first time, it is required to have a licensed issued to run simulations. This license is tied to your hardware configuration –  fortunately, executing the “firstrun.sh” script of VSimRTI, within Docker; it still sees the native hardware. Simulations can be run within Docker, or directly on the host computer, without a new license.

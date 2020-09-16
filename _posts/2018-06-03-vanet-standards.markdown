@@ -4,7 +4,7 @@ title:  "Review of Vehicle Network Standards and Use Cases"
 date:   2018-06-03 15:04:00 +09
 categories: VANET V2X
 ---
-
+#### Author: Steven Platt
 The development of simulation platforms has followed closely the specifications outlined by standards bodies dating back to 2010. For vehicle network applications, these tentpole standards have been the ETSI Intelligent Transport Systems definition, and later expansions in the form of ITU-R Intelligent Transport Systems, LTE Release 14, and LTE release 15. 
 
 # ETSI Intelligent Transport Systems

@@ -4,7 +4,7 @@ title:  "A Vehicle Telemetry Blackbox using Arduino and OBDII"
 date:   2018-09-30 15:04:00 +09
 categories: VANET Arduino
 ---
-
+#### Author: Steven Platt
 Before applying simulated configurations to real vehicles, a period of data collection is required. The following section proposes an arduino-based OBD II ‘black-box’ prototype to measures onboard sensors, such as speed, throttle pedal pressure, and odometer readings. Depending on the vehicle (and OBD II specifications thereof), additional measures such as braking pedal pressure may also be available. The prototype is capable of collecting these vehicles measures, and additionally collects vehicle location data, vehicle follow distance, and exchanges V2X messages through supplemental GPS, ultrasonic sensor, and 802.11-based “Xbee” modules. 
 
 This prototype design allows real-world readings of the parameters implemented both in the java application simulated for the thesis, and its corresponding ‘mapping3’ file, used by VSimRTI to manage the simulation. Note that the hardware proposed is an extension of an existing design [source]. It is intended as a starting point for planning the hardware implementation of simulations done in software with VSimRTI. 
