@@ -19,6 +19,19 @@ The information society envisioned by 6G is characterized by globally pervasive 
 
 Bio sensing, hyper high-speed rail, and sightseeing at sea and in space have been identified as use cases specific to the 6G evolution [1]. Pursuing a macro view of these new networks will allow pairing the new network behaviors with distributed ledger structure in a way that remains compatible as its use cases evolve and change. Table 1 shows the macro view of 6G network performance targets and emergent technologies expected to support them. 
 
+| 6G Performance Targets | Enabling Technologies |
+| ------------ | ------------- |
+| Peak Data Rate (≥1 Tb/s) | THz Communications |
+| User Data Rate (1Gb/s) | Spatially Multiplexed MIMO |
+| Latency (10-100μs) | Large Intelligent Surfaces |
+| Density (107 Devices/km2) | Holographic Beamforming |
+| Traffic Capacity (1 Gb/s/m2) | Visible Light Communications |
+| Mobility (≥1,000 km/h) | Quantum Computing |
+| Energy Efficiency (100x) | Blockchain |
+| Spectrum Efficiency (5-10x) | Artificial Intelligence |
+
+*TABLE 1:* Defining 6G: performance targets and enabling technologies [1]. 6G Performance Targets and Enabling Technologies are not pairwise andare listed here in random order.
+
 ### Finding Utility in Distributed Ledger Structure
 
 In tandem with the development of blockchain, alternative ledger structures have been produced, or evolved to address known limitations, or provide specific focus for behaviors that were secondary or underdeveloped in blockchain. Research has identified a “trilemma” within these systems, noting that at best, they may perform well on only two of three axis: decentralization, scalability, and security [2]. This framing is important as it helps set expectations of system performance for ledger systems embedded in 6G design. In the context of this trilemma, we can deduce, for example, that a data structure adopted for high scalability and decentralization traits, makes tradeoffs in security, making it less suitable for network access control. Or conversely a ledger structure with high inherent security and high decentralization will do so at the expense of scalability - resulting in limited compatibility for network intelligence operations such as the handling of streaming data. The following section provides a representative sample of ledger data structures beyond blockchain, detailing the behaviors inherent to each corresponding data structure. The data structures include: Distributed Hash Table, Directed Acyclic Graph, and Block Lattice, and finally Blockchain.
@@ -55,7 +68,14 @@ Unlike previously mentioned ledger structures which gain flexibility through mod
 
 As summary, table 2 below shows the previously presented data structures as well as the corresponding network behaviors compatible with each.
 
+| Data Structure | Network Behavior |
+| ------------ | ------------- |
+| Distribtued Hash Table | Dynamic Topology & Hyper Density | 
+| Directed Acyclic Graph | Network Autonomy |
+| Block Lattice | Hyper Density | 
+| Blockchain | Network Softwarization |
 
+*TABLE 2:* Mapping data structure to network behaviors. Placing  focus  on  network  behavior  allows  deployment  of  blockchainwithout binding it directly to specific enabling technologies.
 
 
 ## Blockchain Applications in 6G
@@ -110,45 +130,26 @@ Blockchain has gained an increased amount of attention for its potential applica
 
 ### References
 
-\bibitem{b1} Zhang, Z. et al. (2019). 6G Wireless Networks: Vision, Requirements, Architecture, and Key Technologies. IEEE Vehicular Technology Magazine, 14(3), 28–41. https://doi.org/10.1109/mvt.2019.2921208.
+[1] Zhang, Z. et al. (2019). 6G Wireless Networks: Vision, Requirements, Architecture, and Key Technologies. IEEE Vehicular Technology Magazine, 14(3), 28–41. https://doi.org/10.1109/mvt.2019.2921208.
 
-\bibitem{b2} Xie, J., Yu, F. R., Huang, T., Xie, R., Liu, J., \& Liu, Y. (2019). A Survey on the Scalability of Blockchain Systems. IEEE Networks Magazine, 166–173. DOI: 10.1109/MNET.001.1800290.
+[2] Xie, J., Yu, F. R., Huang, T., Xie, R., Liu, J., \& Liu, Y. (2019). A Survey on the Scalability of Blockchain Systems. IEEE Networks Magazine, 166–173. DOI: 10.1109/MNET.001.1800290.
 
-\bibitem{b3} Chalaemwongwan, N., \& Kurutach, W. (2018). State of the art and challenges facing consensus protocols on blockchain. International Conference on Information Networking, 2018-Janua, 957–962. https://doi.org/10.1109/ICOIN.2018.8343266.
+[3] Chalaemwongwan, N., \& Kurutach, W. (2018). State of the art and challenges facing consensus protocols on blockchain. International Conference on Information Networking, 2018-Janua, 957–962. https://doi.org/10.1109/ICOIN.2018.8343266.
 
-\bibitem{b4} Popov, S. (2018). The Tangle v1.4.3, 1–28. [Online] Available: \underline{https://www.iota.org/research/academic-papers}. Accessed on: Oct 2, 2019.
+[4] Popov, S. (2018). The Tangle v1.4.3, 1–28. [Online] Available: \underline{https://www.iota.org/research/academic-papers}. Accessed on: Oct 2, 2019.
 
-\bibitem{b5} M. Ajtai. 1996. Generating hard instances of lattice problems (extended abstract). In Proceedings of the twenty-eighth annual ACM symposium on Theory of Computing (STOC '96). ACM, New York, NY, USA, 99-108. DOI: https://doi.org/10.1145/237814.237838.
+[5] M. Ajtai. 1996. Generating hard instances of lattice problems (extended abstract). In Proceedings of the twenty-eighth annual ACM symposium on Theory of Computing (STOC '96). ACM, New York, NY, USA, 99-108. DOI: https://doi.org/10.1145/237814.237838.
 
-\bibitem{b6} Li, C. A., \& Zhao, C. (n.d.). A Multidimensional Block Lattice Public Chain with Smart Contract Support for Network-as-a-Service. [Online] Available: \underline{https://whitepaper.io/document/238/qlcchain-yellowpaper}. Accessed on: Nov 2, 2019
+[6] Li, C. A., \& Zhao, C. (n.d.). A Multidimensional Block Lattice Public Chain with Smart Contract Support for Network-as-a-Service. [Online] Available: \underline{https://whitepaper.io/document/238/qlcchain-yellowpaper}. Accessed on: Nov 2, 2019
 
-\bibitem{b7} Vukoli, M. (2017). Rethinking Permissioned Blockchains [Extended Abstract]. IBM Research, 3–7. https://doi.org/10.1145/3055518.3055526.
+[7] Vukoli, M. (2017). Rethinking Permissioned Blockchains [Extended Abstract]. IBM Research, 3–7. https://doi.org/10.1145/3055518.3055526.
 
-\bibitem{b8} Infante, J., Oliver, M., \& Macián, C. (n.d.). “Wi-Fi Neutral Operator: Promoting cooperation for network and service growth”. ITS Conference on Regional Economic Development, Pontevedra, Spain, 07/2005.
+[8] Infante, J., Oliver, M., \& Macián, C. (n.d.). “Wi-Fi Neutral Operator: Promoting cooperation for network and service growth”. ITS Conference on Regional Economic Development, Pontevedra, Spain, 07/2005.
 
-\bibitem{b9} Internet Engineering Task Force (IETF). (2015). Host Identity Protocol Version 2 (HIPv2). [Online] Available: \underline{https://tools.ietf.org/html/rfc7401}. Accessed on: Nov 19, 2019.
+[9] Internet Engineering Task Force (IETF). (2015). Host Identity Protocol Version 2 (HIPv2). [Online] Available: \underline{https://tools.ietf.org/html/rfc7401}. Accessed on: Nov 19, 2019.
 
-\bibitem{b10} Stornetta, W. S., \& Haber, S. (1991). How to Time-Stamp a Digital Document. Journal of Cryptology, 3(2), 99–111. https://doi.org/10.1002/pssb.201300062.
+[10] Stornetta, W. S., \& Haber, S. (1991). How to Time-Stamp a Digital Document. Journal of Cryptology, 3(2), 99–111. https://doi.org/10.1002/pssb.201300062.
 
-\bibitem{b11} Novo, O. (2018). Blockchain Meets IoT: An Architecture for Scalable Access Management in IoT. IEEE Internet of Things Journal, 5(2), 1184–1195. https://doi.org/10.1109/JIOT.2018.2812239.
+[11] Novo, O. (2018). Blockchain Meets IoT: An Architecture for Scalable Access Management in IoT. IEEE Internet of Things Journal, 5(2), 1184–1195. https://doi.org/10.1109/JIOT.2018.2812239.
 
-\bibitem{b12} Maksymyuk, T., Gazda, J., Han, L., \& Jo, M. (2019). Blockchain-based intelligent network management for 5g and beyond. 2019 3rd International Conference on Advanced Information and Communications Technologies, AICT 2019 - Proceedings, 36–39. https://doi.org/10.1109/AIACT.2019.8847762.
-
-
-![cttc_toy_car](/assets/img/cttc_toy_car.png)
-
-#### References
-
-[1] ETSI TR 102 638, “Intelligent Transport Systems (ITS); Vehicular Communications; Basic Set of Applications; Definitions”, V1.1.1, 2009. 
-
-[2] ETSI TR 103 298, “Intelligent Transport Systems (ITS); Platooning: pre-standardization study”, 2017. 
-
-[3] ETSI TR 103 299, “Intelligent Transport Systems (ITS); Cooperative Adaptive Cruise Control (C-ACC); Pre-standardization study”, 2017.
-
-[4] ITU-R M.1890, “Intelligent Transport Systems - Guidelines and objectives”, 2011.
-
-[5] 3GPP TR 22.885, “Study on LTE support for Vehicle-to-Everything (V2X) services”, 2015.
-
-[6] 3GPP TR 22.186, “Service requirements for enhanced V2X scenarios”, 2017.
-
-[7] Antonio Eduardo Fernandez et al, "Deliverable D2.1 5GCAR Scenarios, Use Cases, Requirements and KPIs," https://5gcar.eu/wp-content/uploads/2017/05/5GCAR_D2.1_v1.0.pdf, pp.1-87, 31 August, 2017.
+[12] Maksymyuk, T., Gazda, J., Han, L., \& Jo, M. (2019). Blockchain-based intelligent network management for 5g and beyond. 2019 3rd International Conference on Advanced Information and Communications Technologies, AICT 2019 - Proceedings, 36–39. https://doi.org/10.1109/AIACT.2019.8847762.
