@@ -40,6 +40,7 @@ In tandem with the development of blockchain, alternative ledger structures have
 #### Distributed Hash Table
 
 ![distributed hash table](/assets/img/dht.jpg)
+
 *FIGURE 1:* Distributed Hash Table Data Structure.
 
 Distributed hash tables (DHT) operate as a peer-to-peer network layer for storing data. DHT systems operate by spreading data among peers in a network, with a cryptographic function being used to either randomly select, or select in a set distribution, which peers store the data. Like a traditional database, DHT systems function as a key value store where a lookup is required to gain a list of nodes which store the file(s) being requested [3]. It is the oldest distributed ledger design presented here, having underpinned early internet file sharing applications including versions of BitTorrent. Because the selection of nodes which store data is distributed, data stored in distributed hash tables is highly decentralized with high throughput, making it well suited for 6G applications relying on hyper density, including data caching and edge compute. DHT systems may store multiple copies of a file or segment files to further enhance these traits. Devices participating in a distributed hash table system can join and leave the system at any time, allowing long term compatibility in 6G dynamic and multi-tiered topologies where network access may be on-demand or temporary. 
@@ -49,6 +50,7 @@ Negative areas of impact for DHT systems are in transparency and security. The s
 #### Directed Acyclic Graph
 
 ![directed acyclic graph](/assets/img/dag.jpg)
+
 *FIGURE 2:* Directed Acyclic Graph Data Structure.
 
 Directed Acyclic Graph (DAG) structures such as IOTA [4] modify the linked hashing of data to use a graph structure that allows it to expand exponentially. IOTA achieves this by allowing data blocks to be added by validating only two edge blocks (tips) selected at random which forms its graph structure. Decentralization in this format is high due to the linear effort of block contribution tied to the forward hashing from two previous graph tips. This native behavior of high throughput allows DAG structures to easily handle streaming network data, of the kind required for high level network intelligence (AI) systems that power high levels of autonomy in 6G.
@@ -58,6 +60,7 @@ Having a low barrier of participation conversely creates circumstances that can 
 #### Block Lattice
 
 ![block lattice](/assets/img/block_lattice.jpg)
+
 *FIGURE 3:* Block Lattice Data Structure. 
 
 At the time of writing, block lattice structures are early in development, with the earliest block lattice cryptographic construction being outlined by Miklos Ajit in 1996 [5]. Modern lattice structure, such as QLC Chain [6] focus on the reduction of storage requirements compared to blockchain, which stores an ever-expanding block history. Rather than a single monolithic history that is stored and maintained at each node, block lattice platforms require participants to only store their personal ledger, with each block of data having a corresponding block stored in the ledger of the device or system on the other end of the interaction. These records become immutable as independent nodes complete further interactions, effectively spreading or sharding dependencies and storage within the wider environment. The transactions tie together in mutual dependency, the ledgers of peer nodes which expands over time, creating its mesh or lattice structure.
@@ -67,6 +70,7 @@ Block lattice structures have further benefit in that they potentially simplify 
 #### Blockchain
 
 ![blockchain](/assets/img/blockchain.jpg)
+
 *FIGURE 4:* Blockchain Data Structure. 
 
 Unlike previously mentioned ledger structures which gain flexibility through modification and fragmentation of the underlying hashed-linked storage, blockchain allows little manipulation of its base structure outside of consensus model and block size. All nodes participating in blockchain systems must agree on the state of each block added, and the sequence of added blocks - regardless of who authors or ultimate users of the data inside of blocks. This rigid chain structure guarantees a record that is always identical for all nodes in the system, making it especially well-suited to policy-based operations demanding high transparency and auditability, including software defined radio, roaming in hyper mobility, and expanded spectrum resource sharing in 6G. By modifying the algorithms for achieving consensus, blockchain systems can be manipulated to process higher transaction volumes, improve security or control resource usage by allowing nodes to keep full (full-node) or partial (light-node) states [7]. Deploying such modification however, shows consensus latency in blockchain under best case scenarios, are reduced to reach 1 second, confirming that blockchain structure remains incompatible with operations at µ-second scale, such as real-time radio resource control and dynamic accesses not set on a semi-permanent basis. Fig. 4 shows a representation of the blockchain data structure.
@@ -104,6 +108,7 @@ As device density increases, there is also an increasing of public infrastructur
 With blockchain, it is possible in this scenario, to deploy a registry of public utility services, such as vehicles in road networks, that are allowed specific connectivity. To date this has been complicated by limitations of IP address mobility across network boundaries, but that complication will be resolved through the transitional period to IPv6 during the deployment of 5G. In 2016, version 2 of the IETF Host Identity Protocol (HIP) standard [9] abstracts the IPv6 address, by placing a “host identity” between the network and higher-level internet layers of the TCP/IP stack. Combining this evolution of identity with securely shared blockchain registries allows public utility wireless services that can take advantage of fluid access across networks as IPv6 addressing becomes native in 6G. Combining mobile network identity with blockchain decentralized secure storage allows these new classes of access to be regulated at the spectrum block, country, or region level in 6G - without tying them to individual carriers coverage who in isolation may not have market incentive to extend coverage, or otherwise allow access.
 
 ![6G Design](/assets/img/6G_design.jpg)
+
 *FIGURE 5:* Mapping ditributed ledger behaviors to 6G performance targets. 
 
 ### EVOLUTION POTENTIALS OF BLOCKCHAIN
@@ -113,6 +118,7 @@ To the authors knowledge, the origins of blockchain began with cryptographers Ha
 ### Increased Composability
 
 ![blockchain composability](/assets/img/blockchain_composability.jpg)
+
 *FIGURE 6:* Blockchain Composability. 
 
 The size and resource usage of modern blockchains preclude them from full participation among low power or resource constrained network systems. This is shown in network research such as [11], which require a separation of network operation as a result of using proxy devices able to run intensive proof-of-work calculations, or which having enough storage to retain the entirety of a monolithic ledgers’ history. A natural progression in this scenario is to implement an alternative consensus model, or compression scheme to tune chain operation for the environment, rather than modifying the network structure to suit the chain. For example, if a universal record such as currency balance is not being mandated, it is further possible to form and retire chains for individual network operations as the shared data reaches the end of its useful life. Composability of this type is not possible for the most popular blockchain systems, such as Ethereum, which are delivered as an all-or-nothing design which may bundle behaviors that are superfluous or an active detriment in network environments. This awareness bring pressure to the necessity of tuning or composing the functions of the blockchain which impact its performance in the desired application, these include but are not limited to, abilities to modify block size, consensus model, and block timing (fig. 6). 
