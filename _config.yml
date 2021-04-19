@@ -21,6 +21,10 @@ plainwhite:
       url: "https://stevenplatt.github.io/cv/"
   # dark_mode: true
   # disqus_shortname: httpscftang0827githubio
+  condensed_mobile:
+    #- home
+    - page
+    - post
   # generate social links in footer
   social_links:
     github:  stevenplatt
