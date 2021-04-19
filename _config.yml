@@ -15,6 +15,7 @@ plainwhite:
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   analytics_id: UA-22384883-3
+  search: true # set to true to enable searchbar
   navigation:
     - title: CV / Resume
       url: "https://stevenplatt.github.io/cv/"
